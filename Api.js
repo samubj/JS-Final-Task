@@ -166,6 +166,10 @@ document.getElementById("cartBtn")
         showCart();
     });
 
+document.getElementById("cartClose")
+    .addEventListener("click", () => {
+        document.getElementById("cartModal").style.display = "none";
+    });
 
 function showCart() {
 
@@ -214,8 +218,3 @@ function removeFromCart(id) {
     localStorage.setItem("cart", JSON.stringify(cart));
     showCart();
 }
-
-document.getElementById("cartClose")
-    .addEventListener("click", () => {
-        document.getElementById("cartModal").style.display = "none";
-    });
